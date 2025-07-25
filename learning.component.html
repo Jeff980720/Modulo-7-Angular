@@ -1,34 +1,46 @@
-<div>
-    <div>
-        <h2>Unidad Educativa San Jose</h2>
-        <div>
-            <h3>Curso N: {{course.id}}</h3>
+<div class="container">
+    <div class="card my-5">
+        <div class="card-header">
+            <h2 style="text-align: center;">Unidad Educativa San Jose</h2>
         </div>
-        <div>
-            <h3>Nombre: {{course.name}}</h3>
-        </div>
-        <div>
-            <h3>Estudiantes</h3>
-        </div>
-        <div>
-            <table>
-                <thead>
-                    <th>| Id | </th>
-                    <th> Identificacion | </th>
-                    <th> Nombres | </th>
-                    <th> Apellidos |</th>
-                </thead>
-                <tbody>
-                    @for (item of course.students; track $index) {
-                    <tr>
-                        <td>{{item.id}}</td>
-                        <td>{{item.identification}}</td>
-                        <td>{{item.name}}</td>
-                        <td>{{item.surname}}</td>
-                    </tr>
-                    }
-                </tbody>
-            </table>
+        <div class="card-body">
+            <div class="row">
+                <div class="col">
+                    <div class="px-4">
+                        <h3>Curso N: {{course.id}}</h3>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="px-4">
+                        <h3>Nombre: {{course.name}}</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="card my-3">
+                <div class="card-header">
+                    <h3 style="text-align: center;">Estudiantes</h3>
+                </div>
+                <div>
+                    <table class="table table-striped">
+                        <thead>
+                            <th>Id</th>
+                            <th>Identificacion</th>
+                            <th>Nombres</th>
+                            <th>Apellidos</th>
+                        </thead>
+                        <tbody>
+                            @for (item of course.students; track $index) {
+                            <tr>
+                                <td>{{item.id}}</td>
+                                <td>{{item.identification}}</td>
+                                <td>{{item.name}}</td>
+                                <td>{{item.surname}}</td>
+                            </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
 </div>
