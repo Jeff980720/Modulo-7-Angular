@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="card my-5">
+        <div class="card-header">
+            <h2 style="text-align: center;">Unidad Educativa San Jose</h2>
+        </div>
+        <div class="card-body">
+            <course-view [course]="course"></course-view>
+            <div class="card my-3">
+                <div class="card-header">
+                    <h3 style="text-align: center;">Estudiantes</h3>
+                </div>
+                <div>
+                    <student-detail [students]="course.students"></student-detail>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
