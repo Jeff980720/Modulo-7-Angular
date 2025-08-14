@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="card my-5 bg-success text-white">
+        <div class="card-header">
+            <h2 style="text-align: center;">FACTURA</h2>
+        </div>
+        <div class="card-body">
+            <div>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <strong> SECUENCIA:</strong> {{invoice.id}}
+                    </li>
+                </ul>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <company-view [company]="invoice.company"></company-view>
+                </div>
+                <div class="col">
+                    <coustumer-view [customer]="invoice.customer"></coustumer-view>
+                </div>
+            </div>
+            <div class="card my-4">
+                <invoice-detail [items]="invoice.item"></invoice-detail>
+            </div>
+        </div>
+    </div>
+</div>
